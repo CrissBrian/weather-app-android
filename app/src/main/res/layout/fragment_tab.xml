@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:layout_marginTop="150dp"
+        app:cardBackgroundColor="@color/cast_expanded_controller_background_color">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_view_WC"
+                android:layout_width="match_parent"
+                android:layout_height="161dp"
+                android:layout_margin="8dp"
+                android:layout_marginTop="0dp"
+                card_view:cardBackgroundColor="#1E1E1E"
+                card_view:cardCornerRadius="10dp"
+                card_view:cardElevation="8dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <ImageView
+                        android:id="@+id/imageView_WC"
+                        android:layout_width="101dp"
+                        android:layout_height="112dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="38dp"
+                        android:layout_marginLeft="38dp"
+                        android:layout_marginTop="21dp"
+                        tools:srcCompat="@drawable/clear_day"
+                        android:src="@drawable/clear_day"/>
+
+                    <TextView
+                        android:id="@+id/textView_WC"
+                        android:layout_width="236dp"
+                        android:layout_height="113dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="19dp"
+                        android:layout_marginEnd="12dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_toEndOf="@+id/imageView_WC"
+                        android:layout_toRightOf="@+id/imageView_WC"
+                        android:gravity="center_vertical"
+                        android:text="No precipitation throughout the week."
+                        android:textColor="@color/arrows"
+                        android:textSize="24sp" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/line_chart"
+                android:layout_width="match_parent"
+                android:layout_height="608dp"
+                android:layout_below="@+id/card_view_WC"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="22dp"/>
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>
